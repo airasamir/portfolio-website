@@ -1,0 +1,28 @@
+.contact-section {
+  padding-bottom: var(--spacing-lg);
+}
+
+.contact-title {
+  margin-top: 1rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-link {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
