@@ -32,6 +32,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 h1, h2, h3, h4, .serif {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -82,4 +86,8 @@ a:hover {
 /* Shared structural classes */
 .section {
   padding: var(--spacing-xl) 0;
+}
+
+img {
+  max-width: 100%;
 }

@@ -5,7 +5,8 @@
   right: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
+  background: linear-gradient(to bottom, rgba(253, 251, 247, 0.92), rgba(253, 251, 247, 0));
 }
 
 .header.scrolled {
@@ -19,17 +20,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 
 .logo {
   font-size: 1.5rem;
   letter-spacing: -0.05em;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav-links a {
@@ -37,4 +42,44 @@
   text-transform: capitalize;
   letter-spacing: 0.05em;
   font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding-bottom: 0.25rem;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+}
+
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+@media (max-width: 800px) {
+  .header {
+    padding: 1rem 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
 }

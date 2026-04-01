@@ -1,26 +1,35 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import HeroWorks from './components/HeroWorks';
-import About from './components/About';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import Architecture from './pages/Architecture';
+import Art from './pages/Art';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import './App.css';
 
 function App() {
   return (
-    <div className="app-container">
-      <Header />
-      <main>
-        <HeroWorks />
-        <About />
-        <Contact />
-      </main>
-      <footer className="footer">
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', padding: '2rem', fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
-          <span>© 2026 AIRAS AMIR</span>
-          <span>NATIONAL COLLEGE OF ARTS, LAHORE</span>
-        </div>
-      </footer>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Header />
+        <main className="site-main">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/architecture" element={<Architecture />} />
+            <Route path="/art" element={<Art />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <footer className="footer">
+          <div className="container footer-inner">
+            <span>© 2026 AIRAS AMIR</span>
+            <span>NATIONAL COLLEGE OF ARTS, LAHORE</span>
+          </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 

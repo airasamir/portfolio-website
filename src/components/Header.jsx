@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 
 export default function Header() {
@@ -15,11 +16,13 @@ export default function Header() {
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
       <div className="container header-content">
-        <a href="#" className="logo serif">Airas Amir</a>
+        <Link to="/" className="logo serif">Airas Amir</Link>
         <nav className="nav-links">
-          <a href="#works">Works</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/architecture">Architecture</NavLink>
+          <NavLink to="/art">Art</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
       </div>
     </header>

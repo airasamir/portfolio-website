@@ -1,0 +1,132 @@
+.art-page {
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.art-hero {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 2rem;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.art-hero-copy {
+  max-width: 48rem;
+}
+
+.art-hero .hero-title {
+  font-size: clamp(3rem, 6vw, 5.25rem);
+  margin: 1rem 0 1.25rem;
+  letter-spacing: -0.05em;
+}
+
+.art-hero .hero-subtitle {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.art-statement {
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.66);
+}
+
+.art-quote {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.art-statement p:last-child {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.art-gallery-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: end;
+  padding: 2.5rem 0 1rem;
+}
+
+.art-gallery-intro h2 {
+  font-size: 2rem;
+  margin-top: 0.75rem;
+}
+
+.art-gallery-intro p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.gallery-grid {
+  column-count: 3;
+  column-gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 2rem;
+  padding: 0.75rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.art-image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #f2f0eb;
+}
+
+.art-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover .art-img {
+  transform: scale(1.02);
+}
+
+.art-details {
+  padding: 1rem 0.25rem 0.15rem;
+}
+
+.art-title {
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.art-medium,
+.art-dims {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .art-hero,
+  .art-gallery-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    column-count: 1;
+  }
+}

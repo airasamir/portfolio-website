@@ -1,0 +1,140 @@
+.project-carousel {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--bg-primary, #fdfbf7);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+@media (min-width: 900px) {
+  .carousel-slide {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: stretch;
+    min-height: 360px;
+  }
+}
+
+.carousel-slide-image {
+  background: #eae8e4;
+  min-height: 220px;
+}
+
+.carousel-slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  max-height: 480px;
+}
+
+.carousel-slide-copy {
+  padding: 2rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-kicker,
+.carousel-meta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.carousel-kicker {
+  margin-bottom: 0.75rem;
+}
+
+.carousel-slide-copy h3 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.carousel-caption {
+  margin: 0 0 0.9rem;
+  color: var(--text-primary);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.carousel-slide-copy p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  font-size: 1.05rem;
+}
+
+.carousel-meta {
+  margin-top: 1.1rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: var(--bg-primary, #fff);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.carousel-dot.active {
+  background: var(--text-primary, #1a1a1a);
+  transform: scale(1.15);
+}
+
+.carousel-dot:hover:not(.active) {
+  background: rgba(0, 0, 0, 0.35);
+}
