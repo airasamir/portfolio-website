@@ -79,10 +79,15 @@
 
 .home-panel-card {
   padding: 2rem;
-  background:
+  /* Use contain for the photo layer so the wide aerial is not cropped (cover hid labels like DESIGN STRATEGIES). */
+  background-color: #eae8e4;
+  background-image:
     linear-gradient(rgba(253, 251, 247, 0.88), rgba(253, 251, 247, 0.88)),
-    url('/assets/architecture/hero/hero_page_001.png') center/cover no-repeat;
-  min-height: 340px;
+    url('/assets/architecture/reclaiming/design_strategies_3d.png');
+  background-position: center, center;
+  background-size: 100% 100%, contain;
+  background-repeat: no-repeat;
+  min-height: min(52vh, 440px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -153,7 +158,7 @@
 }
 
 .architecture-tile::before {
-  background-image: url('/assets/architecture/mapping/mapping_page_001.png');
+  background-image: url('/assets/architecture/reclaiming/master_plan.png');
 }
 
 .art-tile::before {
@@ -192,9 +197,15 @@
 }
 
 .architecture-card {
-  background:
+  /* Same as home-panel-card: wide diagram + cover crops edges; use contain so the full board stays visible. */
+  background-color: #eae8e4;
+  background-image:
     linear-gradient(rgba(253, 251, 247, 0.86), rgba(253, 251, 247, 0.86)),
-    url('/assets/architecture/section/section_page_001.png') center/cover no-repeat;
+    url('/assets/architecture/reclaiming/design_strategies_diagram.png');
+  background-position: center, center;
+  background-size: 100% 100%, contain;
+  background-repeat: no-repeat;
+  min-height: 340px;
 }
 
 .art-card {

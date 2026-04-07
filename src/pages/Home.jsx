@@ -29,8 +29,8 @@ export default function Home() {
               <span className="home-panel-label">Featured thesis</span>
               <h2 className="serif">Reclaiming Our City: Stitching Town Hall into Public Realm</h2>
               <p>
-                Reimagining Lahore Town Hall as a decolonized civic platform through analysis, mapping, sectional
-                studies, and spatial strategies that privilege strength over power.
+                Reimagining Lahore Town Hall as a decolonized civic platform through four design strategies —
+                Ground:0, Perch, Forum, and Edge — that transform a fragmented site into continuous public realm.
               </p>
             </div>
             <div className="home-panel-grid">
@@ -52,8 +52,8 @@ export default function Home() {
               <span className="text-label">Architecture</span>
               <h2 className="serif">Process before product.</h2>
               <p>
-                The architecture section follows Ground Zero through governance research, site reading, mapping,
-                sectional exploration, study models, and design resolution.
+                The architecture section presents Reclaiming Our City — from user analysis and zoning through
+                four design strategies, master plan, and sectional resolution.
               </p>
               <Link to="/architecture" className="section-link">
                 Enter architecture
